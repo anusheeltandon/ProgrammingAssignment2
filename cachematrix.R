@@ -1,11 +1,13 @@
-## This module aims at reducing the time to run iterative matrix inversion 
-## process by caching the results. If the inverse of a matrix is already 
+## This module aims at reducing the time to run matrix inversion 
+## process for a list of matrices by caching the results. 
+## If the inverse of a matrix is already 
 ## calculated and available in the cache then it won't be taken through the 
 ## calculation process again.
 
 ## Users of the module are advised to use 'cacheSolve' function over a list of
 ## matrices to calculate their inverse(s) [Call 'cacheSolve' from within a loop
-## that is iterating over list of matrices].
+## that is iterating over list of matrices that were created using 
+## makeCacheMatrix].
 ################################################################################
 
 
