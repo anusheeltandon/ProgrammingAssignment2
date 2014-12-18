@@ -11,7 +11,7 @@
 ################################################################################
 
 
-## creates a special matrix that caches its mean
+## creates a special matrix that caches its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
         cachedInverse <- NULL
@@ -28,8 +28,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve method iterates over a list of matrices and calculate their inverse
-## if inverse for a matrix is already available in the cache then it skips 
+## cacheSolve method is called repeatedly from a loop iterating over a list of
+## matrix objects (created using makeCachedMatrix method). It calculates the 
+## inverse of a given matrix object. 
+## But,if inverse for a matrix is already available in the cache then it skips 
 ## calculation and picks/uses the cached value instead
 
 cacheSolve <- function(x, ...) {
